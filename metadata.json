@@ -1,0 +1,7 @@
+{
+  "name": "SentientAI - Emotion Detection",
+  "description": "An advanced AI-powered emotion detection system that analyzes facial expressions in real-time using Gemini 3 Flash.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
