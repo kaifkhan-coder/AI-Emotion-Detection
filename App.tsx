@@ -106,9 +106,9 @@ const App: React.FC = () => {
   }, [state.autoMode, state.isAnalyzing, state.mode]);
 
   return (
-    <div className="min-h-screen bg-slate-950 p-4 md:p-8 font-sans selection:bg-blue-500 selection:text-white text-slate-100">
+    <div className="min-h-screen bg-slate-950 flex flex-col p-4 md:p-8 font-sans selection:bg-blue-500 selection:text-white text-slate-100">
       {/* Header */}
-      <header className="max-w-7xl mx-auto mb-8">
+      <header className="max-w-7xl w-full mx-auto mb-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
             <div className="flex items-center gap-3 mb-1">
@@ -183,7 +183,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <main className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
         <div className="lg:col-span-6 space-y-6">
           <div className="space-y-4">
              <div className="flex items-center justify-between">
@@ -262,6 +262,27 @@ const App: React.FC = () => {
             )}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="max-w-7xl w-full mx-auto mt-12 py-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+            <i className="fa-solid fa-brain text-xs text-blue-500"></i>
+          </div>
+          <span className="text-xs font-bold uppercase tracking-wider">SentientAI Neural Engine v3.0</span>
+        </div>
+        
+        <div className="text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+          <span>Powered By</span>
+          <span className="text-blue-500 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">KAIF</span>
+        </div>
+
+        <div className="flex gap-6">
+          <a href="http://www.khankaif-cyber.github.com" className="hover:text-blue-400 transition-colors text-xs"><i className="fa-brands fa-github text-sm"></i></a>
+          <a href="" className="hover:text-blue-400 transition-colors text-xs"><i className="fa-brands fa-linkedin text-sm"></i></a>
+          <a href="http://www.linkedin.com" className="hover:text-blue-400 transition-colors text-xs"><i className="fa-solid fa-globe text-sm"></i></a>
+        </div>
+      </footer>
 
       <style>{`
         @keyframes scan {
